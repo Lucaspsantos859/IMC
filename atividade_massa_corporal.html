@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Massa corporal</title>
+    <script>/*** inclusão do javascript interna**/
+        var nome = prompt('Informe seu nome:')
+        var altura = prompt('Informe sua altura:')
+        var peso = prompt('Informe seu peso:')
+        var massa = null
+        var indice = null
+
+        altura = parseFloat(altura)
+        peso = parseFloat(peso)
+
+        altura = altura/100
+        massa = peso / (altura * altura)
+        massa = parseFloat(massa.toFixed(2)) 
+
+        if(massa<18.5){
+            indice = "Magreza"
+        }else if(massa>=18.5 && massa<=24.9){
+            indice = 'Peso Normal'
+        }else if(massa>=25 && massa<=29.0){
+            indice = 'Sobrepeso'
+        }else if(massa>=30 && massa<=34.9){
+            indice = 'Obesidade grau I'
+        }else if(massa>=35 && massa<=39.9){
+            indice = 'Obesidade grau II'
+        }else{
+            indice = 'Obesidade grau III'
+        }
+
+        document.write(nome+' seu indice de massa corporal é de ' +massa+ ' indicando que vc está com ' +indice)
+        
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
